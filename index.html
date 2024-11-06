@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    
+    <!-- link bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- my css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Sijazoo Family</title>
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-transparent">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Sijazoo Family</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tentang.html">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="documentasi.html">Documentasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">Kontak</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <!-- beranda -->
+    <section class="d-flex justify-content-center align-items-center beranda">
+      <div class="container text-center">
+        <h1 class="welcome-text font-weight-bold"></h1>
+        <p class="supporting-text">"Di sini kita nggak cuma belajar, tapi jadi keluarga 🦁✨ Bareng-bareng ngegas skill, hadapi tantangan, dan bikin momen epic bareng! 💪🔥"</p>
+        <a href="tentang.html" class="btn btn-ungu rounded-3">Selanjutnya</a>
+      </div>
+      <div class="absolute-hero">
+        <div class="bg-shape1 bg-pink opacity-50 bg-blur"></div>
+        <div class="bg-shape2 bg-ungu opacity-50 bg-blur"></div>
+        <div class="bg-shape1 bg-ungu-muda opacity-50 bg-blur"></div>
+      </div>
+    </section>
+
+    <!-- akhir beranda -->
+
+    <!-- scripts Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- my js -->
+     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const welcomeTextElement = document.querySelector(".welcome-text");
+        const text = "Welcome to Sijazoo Family!";
+        let index = 0;
+
+        function typeText() {
+          if (index < text.length) {
+            welcomeTextElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeText, 100); // Adjust typing speed here
+          }
+        }
+
+        typeText();
+      });
+
+     </script>
+  </body>
+</html>
